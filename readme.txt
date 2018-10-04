@@ -2,20 +2,21 @@
 
 Three steps are included.
 
-Step1: Each ply file in dataset should be divided into two ply files.
+Step1: Each ply file in dataset is divided into two ply files.
        You can use up_partition.exe and down_partition.exe in ../plyedit/partition folder.
        
 	e.g., up_partition.exe longdress_vox10_ 1051 1350
      	      down_partition.exe longdress_vox10_ 1051 1350
 
 Step2: Replace the updated source files in ../source to TMC2.20 Reference software
-       Please run c2.3 conditions in CTC and replace cfg files in ../cfg folder to enable HM support tile coding.
+       Please run (C2 lossyG,lossyA,intra) conditions in N17766_CTC 
+       and please replace cfg files in ../cfg folder to enable HM to support tile/slice coding.
 
 
 Step3: two sets of decoded ply files should be combined .
        You can use combination.exe in ../plyedit/combination folder.
     
-       combination.exe head body 0 300
+       e.g., combination.exe head body 0 300
 
 
 
